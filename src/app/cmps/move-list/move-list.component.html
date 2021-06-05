@@ -1,8 +1,0 @@
-<div class="moves-list">
-  <h3 *ngIf="!isLastOnly">Moves history:</h3>
-  <h3 *ngIf="isLastOnly">Last moves:</h3>
-  <div class="move" *ngFor="let move of moves">
-    <p><span>At: </span>{{ move.at | date: "d/MM/yy, h:mm a" }}</p>
-    <p><span>Amount: </span>{{ move.amount }} coins</p>
-  </div>
-</div>
