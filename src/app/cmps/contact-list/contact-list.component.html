@@ -1,0 +1,5 @@
+<div class="contact-list">
+  <button (click)="onAddContact()">+</button>
+  <contact-preview *ngFor="let contact of contacts" [contact]="contact" (click)="onSelectContact.emit(contact._id)">
+  </contact-preview>
+</div>

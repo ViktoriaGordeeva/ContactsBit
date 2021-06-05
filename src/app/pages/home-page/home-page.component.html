@@ -1,0 +1,12 @@
+<div class="user-info">
+    <img *ngIf="loaded===false" src="https://media.giphy.com/media/WiIuC6fAOoXD2/giphy.gif" alt="" />
+    <img (load)="loaded=true" src='https://robohash.org/{{user.name}}.png?set=set5'>
+    <h1>Welcome, {{user.name}}!</h1>
+    <p> <span>Coins:</span> {{user.coins}} </p>
+    <p> <span>BTC:</span> {{rate | json}} </p>
+
+    <div class="last-moves" *ngIf="lastMoves.length > 0">
+        <move-list [moves]="lastMoves" [isLastOnly]="true"></move-list>
+    </div>
+</div>
+<router-outlet></router-outlet>

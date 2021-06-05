@@ -1,0 +1,6 @@
+<div class="contacts">
+  <contact-filter *ngIf="!selectedContactId " (onFilterBy)="onFilter($event)"></contact-filter>
+  <contact-list *ngIf="!selectedContactId" [contacts]="contacts" (onSelectContact)="selectedContactId=$event">
+  </contact-list>
+  <router-outlet></router-outlet>
+</div>

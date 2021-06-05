@@ -1,0 +1,12 @@
+<section class="edit-section">
+    <div class="edit-btns">
+        <button (click)="onBack()">Back</button>
+        <button (click)="onRemoveContact()">Delete</button>
+    </div>
+    <form class="contact-edit" (submit)="onAddContact()">
+        <input type="text" name="name" [(ngModel)]="contact.name" placeholder="Name"/>
+        <input type="text" name="email" [(ngModel)]="contact.email" placeholder="Email"/>
+        <input type="text" name="phone" [(ngModel)]="contact.phone" placeholder="Phone"/>
+        <button>Save</button>
+    </form>
+</section>

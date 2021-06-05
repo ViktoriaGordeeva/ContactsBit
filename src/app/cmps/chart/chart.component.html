@@ -1,0 +1,5 @@
+<div class="chart" *ngFor="let chart of charts">
+    <google-chart [width]="width" [title]="chart.title" [type]="chart.type" [data]="chart.data"
+        [columns]="chart.columns" [options]="chart.options">
+    </google-chart>
+</div>
